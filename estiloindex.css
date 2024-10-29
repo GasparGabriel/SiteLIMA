@@ -1,0 +1,333 @@
+*{
+    background-color:darkgray;
+}
+
+/*MENU DE NAVEGAÇÃO*/
+
+nav img {
+    background-color: #333;
+    float:right;
+    margin-right: 80px;
+    
+}
+
+/* Estilo do fundo da barra de navegação */
+nav {
+    
+    background-color: #333;
+    padding: 10px 0;
+    float: center;
+    height: 100%;
+    width: 100%;
+
+
+}
+
+/*Estilo e posicionamento de cada elemento na aba de navegação*/
+nav ul {
+    list-style-type: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    
+}
+
+
+/*Posicionamento do dropdown*/
+nav ul li {
+    position:relative; 
+    margin: 0 15px;
+    background-color: #333;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 27px;
+    padding: 10px;
+    display: block; /* Torna o link clicável em toda a área */
+    background-color: #333;
+    transition: color 0.5s;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+nav ul li a:hover {
+    color: #ff6347 ;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none; /* Esconde o submenu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: gray;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: black; /* Cor de fundo ao passar o mouse sobre o submenu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+/* Estilo geral do footer */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, sans-serif;
+    
+}
+
+/*FOOTER*/
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: gray;
+}
+
+.footer-section {
+    flex-basis: 23%; /* Faz com que as seções ocupem 23% da largura, com espaço para margens */
+    margin-bottom: 20px;
+    background-color: gray;
+}
+
+.footer-section h4 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #ff6347;
+    background-color: gray;
+}
+
+.footer-section p, .footer-section ul {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: gray;
+}
+
+.footer-section ul {
+    list-style-type: none;
+    background-color: gray;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+    background-color: gray;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    background-color: gray;
+}
+
+.footer-section ul li a:hover {
+    color: #ff6347;
+    background-color: gray;
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 10px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+    background-color: gray;
+}
+
+.social-links a:hover {
+    color: #ff6347;
+    background-color: gray;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    font-size: 14px;
+    background-color: gray;
+}
+
+.footer-bottom p {
+    margin: 0;
+    background-color: gray;
+}
+.social-links{
+    background-color: gray; 
+}
+
+/*SLIDER*/
+
+/* Estilização do container do slider */
+.slider {
+    width: 100%; /* O slider ocupa 100% da largura disponível */
+    max-width: 90%; /* Limite de largura para o slider */
+    margin: 0 auto; /* Centraliza o slider horizontalmente */
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa os limites do container */
+    position: relative; /* Posiciona o slider de forma relativa para posicionar elementos dentro dele, se necessário */
+    border-radius: 10px;
+    border: 5px solid #555;
+}
+
+/* Estilização do container das slides */
+.slides {
+    display: flex; /* Alinha os slides em linha, horizontalmente */
+    width: 300px; /* Largura do container de slides é 3 vezes a largura do slider para acomodar todos os slides */
+    height: 150px;
+    animation: slideAnimation 9s infinite; /* Aplica a animação que movimenta os slides, com duração de 9 segundos e repetição infinita */
+
+}
+
+/* Estilização individual de cada slide */
+.slide {
+    width: 100%; /* Cada slide ocupa 100% da largura do slider */
+    flex-shrink: 0; /* Evita que o slide encolha e force o flex a alterar seu tamanho */
+}
+
+/* Definição da animação para os slides */
+@keyframes slideAnimation {
+    0% { transform: translateX(0); } /* Posição inicial do primeiro slide */
+    33% { transform: translateX(-100%); } /* Move para o segundo slide */
+    66% { transform: translateX(-200%); } /* Move para o terceiro slide */
+    100% { transform: translateX(0); } /* Retorna ao primeiro slide */
+}
+
+/* Estilização das imagens dentro dos slides */
+.slide img {
+    width: 100%; /* A imagem ocupa 100% da largura do slide */
+    display: block; /* Remove qualquer espaço extra ao redor da imagem */
+}
+
+.conhecanossoscursos{
+    padding-left: 260px;
+}
+
+/* Estilo para o contêiner principal */
+.container {
+    display: flex; /* Define o contêiner como um flexbox */
+    gap: 20px; /* Espaçamento entre os cards */
+    flex-wrap: wrap; /* Permite que os cards quebrem linha se necessário */
+}
+
+/* Estilo para cada card */
+.card {
+    background-color: darkgray;
+    border: 1px solid gray;
+    border-radius: 8px; /* Arredonda os cantos dos cards */
+    padding: 40px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra para dar um efeito de elevação */
+    flex: 1; /* Permite que os cards cresçam igualmente */
+    max-width: 300px; /* Define uma largura máxima para os cards */
+    
+}
+
+/* Estilo para o título dos cards */
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.5em;
+    color: #333;
+    text-align: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Estilo para o parágrafo dos cards */
+.card p {
+    color: #666;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container img{
+    width: 300px;
+    height: 200px; 
+    border-radius: 20px;
+    border: 3px solid #ff6347;
+}
+
+.conhecacursos{
+    font-size: xx-large;
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.quemsomos{
+    font-size: xx-large;
+    font-size: 50px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.logosobre{
+    height: 350px;
+    width: 350px;
+    border: black;
+}
+
+.sobre{
+    display: flex;
+}
+
+.sobre p{
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    margin-right: 10px;
+}
+.banner{
+    height: 360px;
+    width: 988px;
+    border-radius: 10px;
+    display: block;
+    margin: 0 auto;
+}
+*{
+    background-color: darkgray;
+}
+main {
+    background-color: darkgray;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estiliza a tabela do carrinho */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: darkgray;
+    font-weight: bold;
+}
