@@ -1,4 +1,4 @@
-// Função para atualizar o preço total de cada produto baseado na quantidade
+    // Função para atualizar o preço total de cada produto baseado na quantidade
 function atualizarPrecoTotal(produtoLinha) {
     const quantidade = produtoLinha.querySelector('.quantidade').value;
     const precoUnitario = parseFloat(produtoLinha.querySelector('.preco-unitario').innerText.replace('R$', '').replace(',', '.'));
